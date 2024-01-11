@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
-
 {% block main %}
-Seja bem vindo!
+   <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      <form method="post" action="{% url 'logout' %}">     
+
+        {% csrf_token %}     
+    
+        <button type="submit" class="btn btn-primary">Logout</button>
+    
+    </form>
+    </div>
+  </div>
 {% endblock %}
